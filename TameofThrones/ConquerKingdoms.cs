@@ -22,16 +22,22 @@ namespace TameofThrones
                                                                                    {"AIR", "OWL"},
                                                                                    {"FIRE", "DRAGON"} };
             Kingdom kingdom = new Kingdom("SPACE");
-            List<string> allyKingdoms = kingdom.GetAllies(kingdom.name, kingdomDict, secretMessageFileName);
+            List<string> allyKingdoms = kingdom.GetAllies(kingdomDict, secretMessageFileName);
 
-            Allies allies = new Allies(allyKingdoms);
+            Allies allies = new Allies(kingdom.name, allyKingdoms);
             allies.Print();
 
         }
 
-        public List<string> GetAllies(string conqueringKingdom, Dictionary<string, string> kingdomDict, string secretMessageFileName)
+        /// <summary>
+        /// Function to find the allies of the conquering kingdom
+        /// </summary>
+        /// <param name="kingdomDict">Dictionary. Key - Kingdom, Value - Emblem</param>
+        /// <param name="secretMessageFileName">Full path of the input file</param>
+        /// <returns>List of allies</returns>
+        public List<string> GetAllies(Dictionary<string, string> kingdomDict, string secretMessageFileName)
         {
-            List<string> allyKingdoms = new List<string>() { conqueringKingdom };
+            List<string> allyKingdoms = new List<string>();
 
             string[] secretMessages = File.ReadAllLines(secretMessageFileName);
 
@@ -46,7 +52,7 @@ namespace TameofThrones
                 string decryptedMessage = message.Decrypt(encryptionKey);
 
                 Emblem emblem = new Emblem(emblemName);
-                Dictionary<char, int> emblemDistinctCharCountDict = emblem.CreateDistinctCharCountDict();
+                Dictionary<char, int> emblemDistinctCharCountDict = emblem.GetDistinctCharCount();
 
                 if(emblem.IsSubsetofMessage(decryptedMessage, emblemDistinctCharCountDict))
                 {
@@ -70,6 +76,11 @@ namespace TameofThrones
             this.message = message;
         }
 
+        /// <summary>
+        /// Function to decrypt the given message
+        /// </summary>
+        /// <param name="encryptionKey"></param>
+        /// <returns>Decrypted message</returns>
         public string Decrypt(int encryptionKey)
         {
             StringBuilder decryptedMessage = new StringBuilder();
@@ -89,7 +100,12 @@ namespace TameofThrones
         {
             this.name = name;
         }
-        public Dictionary<char, int> CreateDistinctCharCountDict()
+
+        /// <summary>
+        /// Creates a dictionary of distinct emblem characters with their counts as values
+        /// </summary>
+        /// <returns> Dictionary. Key - distinct characters in the given emblem, value - counts</returns>
+        public Dictionary<char, int> GetDistinctCharCount()
         {
             Dictionary<char, int> distinctCharCountDict = new Dictionary<char, int>();
             for (int i = 0; i < name.Length; i++)
@@ -106,6 +122,12 @@ namespace TameofThrones
             return distinctCharCountDict;
         }
 
+        /// <summary>
+        /// Checks whether the emblem is a subset of the decrypted message
+        /// </summary>
+        /// <param name="decryptedMessage">Decrypted message</param>
+        /// <param name="distinctCharCountDict">Dictionary. Key - distinct characters in the given emblem, value - counts</param>
+        /// <returns></returns>
         public bool IsSubsetofMessage(string decryptedMessage, Dictionary<char, int> distinctCharCountDict)
         {
             for (int i = 0; i < decryptedMessage.Length; i++)
@@ -138,20 +160,29 @@ namespace TameofThrones
     }
     public class Allies
     {
+        public static int RequiredAllyCount = 3;
         private List<string> allyKingdoms;
-        public Allies(List<string> allyKingdoms)
+        private string conqueringKingdom;
+        public Allies(string conqueringKingdom, List<string> allyKingdoms)
         {
+            this.conqueringKingdom = conqueringKingdom;
             this.allyKingdoms = allyKingdoms;
         }
 
+        /// <summary>
+        /// Prints the conquering kingdom and its allies, 
+        /// if the ally count is greater than the specified count.
+        /// Else, prints "NONE"
+        /// </summary>
         public void Print()
         {
-            if (allyKingdoms.Count < 4)
+            if (allyKingdoms.Count < RequiredAllyCount)
             {
                 Console.WriteLine("NONE");
             }
             else
             {
+                Console.Write("{0} ", conqueringKingdom);
                 foreach (string kingdom in allyKingdoms)
                 {
                     Console.Write("{0} ", kingdom);

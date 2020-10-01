@@ -11,12 +11,6 @@ C:\Users\hashr\Desktop\Projects\GeekTrust\TameofThrones\TameofThrones\obj\Debug\
 C:\Users\hashr\Desktop\Projects\GeekTrust\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.dll
 C:\Users\hashr\Desktop\Projects\GeekTrust\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.pdb
 C:\Users\hashr\Desktop\Projects\GeekTrust\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.genruntimeconfig.cache
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.exe
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.deps.json
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.runtimeconfig.json
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.runtimeconfig.dev.json
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.dll
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\TameofThrones.pdb
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.csprojAssemblyReference.cache
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.AssemblyInfoInputs.cache
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.AssemblyInfo.cs
@@ -30,3 +24,9 @@ C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.dll
 C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.pdb
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\geektrust.dll
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\geektrust.pdb
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.exe
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.deps.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.runtimeconfig.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.runtimeconfig.dev.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.dll
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\bin\Debug\netcoreapp3.1\geektrust.pdb
