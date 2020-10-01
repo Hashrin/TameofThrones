@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace TameofThrones
@@ -37,7 +38,7 @@ namespace TameofThrones
         /// <returns>List of allies</returns>
         public List<string> GetAllies(Dictionary<string, string> kingdomDict, string secretMessageFileName)
         {
-            List<string> allyKingdoms = new List<string>();
+            HashSet<string> allyKingdoms = new HashSet<string>();
 
             string[] secretMessages = File.ReadAllLines(secretMessageFileName);
 
@@ -54,14 +55,14 @@ namespace TameofThrones
                 Emblem emblem = new Emblem(emblemName);
                 Dictionary<char, int> emblemDistinctCharCountDict = emblem.GetDistinctCharCount();
 
-                if (emblem.IsSubsetofMessage(decryptedMessage, emblemDistinctCharCountDict))
+                if (emblem.IsSubsetofMessage(decryptedMessage, emblemDistinctCharCountDict) && !allyKingdoms.Contains(kingdom))
                 {
                     allyKingdoms.Add(kingdom);
                 }
 
             }
 
-            return allyKingdoms;
+            return allyKingdoms.ToList();
 
         }
 
