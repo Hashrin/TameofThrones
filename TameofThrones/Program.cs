@@ -14,6 +14,7 @@ namespace TameofThrones
         }
         static void Main(string[] args)
         {
+            string secretMessageFileName = args[0];
             Dictionary<string, string> kingdomDict = new Dictionary<string, string>() { {"SPACE", "GORILLA"},
                                                                                    {"LAND", "PANDA"},
                                                                                    {"WATER", "OCTOPUS"},
@@ -21,19 +22,18 @@ namespace TameofThrones
                                                                                    {"AIR", "OWL"},
                                                                                    {"FIRE", "DRAGON"} };
             Kingdom kingdom = new Kingdom("SPACE");
-            List<string> allyKingdoms = kingdom.GetAllies(kingdom.name, kingdomDict);
+            List<string> allyKingdoms = kingdom.GetAllies(kingdom.name, kingdomDict, secretMessageFileName);
 
             Allies allies = new Allies(allyKingdoms);
             allies.Print();
 
         }
 
-        public List<string> GetAllies(string conqueringKingdom, Dictionary<string, string> kingdomDict)
+        public List<string> GetAllies(string conqueringKingdom, Dictionary<string, string> kingdomDict, string secretMessageFileName)
         {
             List<string> allyKingdoms = new List<string>() { conqueringKingdom };
 
-            string secretMessagePath = @"C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\Input\input.txt";
-            string[] secretMessages = File.ReadAllLines(secretMessagePath);
+            string[] secretMessages = File.ReadAllLines(secretMessageFileName);
 
             foreach (string secretMessage in secretMessages)
             {

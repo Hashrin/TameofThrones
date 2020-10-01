@@ -21,6 +21,12 @@ C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.AssemblyInfoInputs.cache
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.AssemblyInfo.cs
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.csproj.CoreCompileInputs.cache
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.dll
-C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.pdb
 C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\TameofThrones.genruntimeconfig.cache
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.exe
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.deps.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.runtimeconfig.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.runtimeconfig.dev.json
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.dll
+C:\Users\hashr\Desktop\Projects\TameofThrones\geektrust\geektrust.pdb
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\geektrust.dll
+C:\Users\hashr\Desktop\Projects\TameofThrones\TameofThrones\obj\Debug\netcoreapp3.1\geektrust.pdb
